@@ -22,6 +22,7 @@ jobs:
         sudo chown -R runner ../..
         mkdir -p ../fred/dist lib
         wget https://github.com/hyphanet/fred/releases/download/build01497/freenet.jar -qO ../fred/dist/freenet.jar
+        wget https://github.com/Kampbell/db4o-8.0/raw/bf02ee06e76b75753a00131b871ae3821f24e370/lib/db4o-8.0.276.16149-core-java5.jar -qO lib/db4o-8.0.276.16149-core-java5.jar
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
     - name: Upload XMLSpider
